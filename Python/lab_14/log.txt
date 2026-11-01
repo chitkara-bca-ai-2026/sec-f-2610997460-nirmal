@@ -1,0 +1,94 @@
+# LIBRARY BOOK & CATEGORY MANAGER
+## CODING MISTAKE LOG
+
+### 1. Confusion with the overall concept
+
+**Mistake:**  
+At first, I did not fully understand how to combine lists, tuples, sets, loops, and set operations in one program.
+
+**Fix:**  
+I used hints from ChatGPT to understand how to start the program and then worked through each menu option step by step.
+
+### 2. Incorrect category values
+
+**Mistake:**  
+Initially, I stored categories with extra text such as "|Genre: AI" and "|Genre: programming". This caused mismatches when comparing library categories with the student wishlist.
+
+**Fix:**  
+I changed the book records to store only category names, such as "AI", "programming", and "Software Engineering".
+
+### 3. Inconsistent category capitalization and spacing
+
+**Mistake:**  
+Values such as "AI", "Ai", and "ai" were treated as different strings by Python. Extra spaces could also cause mismatches.
+
+**Fix:**  
+I used `.strip().title()` when accepting new book categories and wishlist categories. I also corrected the initial category values.
+
+### 4. Forgot to add the new book to the catalog
+
+**Mistake:**  
+I commented out `books.append(new_book)`, so the new book was not saved in the books list even though its category was added to the set.
+
+**Fix:**  
+I restored `books.append(new_book)` and kept `library_categories.add(category)` so both data structures are updated.
+
+### 5. Repeated total-book count
+
+**Mistake:**  
+I initially placed `print(len(books))` inside the for loop, which printed the total number of books repeatedly.
+
+**Fix:**  
+I moved the total count outside the loop so it is displayed only once.
+
+### 6. Displaying categories from book records instead of the set
+
+**Mistake:**  
+I initially printed each book's category directly. This could display duplicate categories.
+
+**Fix:**  
+I displayed `library_categories`, which stores unique category values.
+
+### 7. Incorrect or fixed success messages
+
+**Mistake:**  
+I used fixed messages that named a particular book or category, even when the user entered something different.
+
+**Fix:**  
+I used variables such as `book_title`, `category`, and `requested_category` in the messages so they reflect the user's input.
+
+### 8. Incorrect set difference
+
+**Mistake:**  
+I initially used `library_categories - student_wishlist` for the purchase order.
+
+**Fix:**  
+I changed it to `student_wishlist - library_categories` because the purchase order should contain categories requested by students that the library does not have.
+
+### 9. Missing invalid-choice handling
+
+**Mistake:**  
+The program initially did not display a message when the user entered a menu choice outside 1 to 6.
+
+**Fix:**  
+I added an `else` block to display an invalid-choice message.
+
+---
+
+## FINAL TESTING NOTES
+
+- The book catalog uses a list of tuples.
+- Library categories are created using set comprehension.
+- New books are added using `append()`.
+- New categories are added using `add()`.
+- Intersection (`&`), difference (`-`), and union (`|`) are used for category gap analysis.
+- The menu runs inside a `while` loop and exits using `break`.
+
+## REMAINING OPTIONAL IMPROVEMENTS
+
+1. If a user enters a letter instead of a number for the menu choice, `int(input())` can raise a `ValueError`. This can be handled using `try-except`.
+2. `.title()` changes "AI" into "Ai". Therefore, a consistent naming convention should be used for both library and wishlist categories.
+
+## FINAL REFLECTION
+
+Initially, I struggled to understand the complete problem and how to apply loops and set operations. After getting a few hints and spending more time practising, I understood how to structure the program. While testing, I found mistakes in adding records, category matching, displaying unique values, and set difference. I corrected these issues step by step. This helped me understand how lists, tuples, sets, loops, and set operations work together in a program.

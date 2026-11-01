@@ -1,0 +1,23 @@
+Firstly, i did not understand the whole concept but after having some hints from chatgpt ,i understand how to start it.
+i was getting confused while applying loops but after giving some time to it,
+i come to use it correctly and last was testing the code i faced some issues but that was not the major one.
+
+**Lab Reflection:**
+
+**1. Approach:**
+
+Firstly, I did not understand the complete concept. However, after getting a few hints from ChatGPT, 
+I understood how to start solving the problem.
+I used loops to approach the problem and gradually learned how to apply them correctly.
+
+**2. Errors Faced:**
+
+- **Error 1: Confusion while applying loops.**  
+  Fix: I spent some time understanding the loop structure and how to use it correctly.
+
+- **Error 2: Issues while testing the code.**  
+  Fix: I checked my code carefully, identified the mistakes, and corrected them.
+
+**3. Output:**
+
+After understanding the concept, applying the loops correctly, and testing the code, I was able to get the expected output successfully.
