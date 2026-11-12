@@ -1,0 +1,52 @@
+# CHALLENGE LOG – ENTERPRISE MODULAR UTILITY CALCULATOR
+
+## 1. Mistakes and Challenges Faced
+
+**1. Understanding Functions and Return Values**
+- I initially found it difficult to understand how functions return results using `return`.
+- I had to understand that the returned value should be stored in a variable before using it in the main program.
+- I learned how to call functions such as `add()`, `subtract()`, `multiply()`, `divide()`, `modulus()`, and `power()`.
+
+**2. Handling Division by Zero**
+- I faced difficulty handling division when the second number was zero.
+- I learned that division by zero is not possible.
+- I used `if b == 0` inside the division function and returned `None` when the operation was invalid.
+
+**3. Modulus by Zero**
+- I made a mistake while checking the modulus operation.
+- I wrote `if modulus is None` instead of `if res is None`.
+- The problem was that I was checking the function itself instead of the result returned by the function.
+- I corrected it by writing `if res is None`.
+
+**4. Managing Calculation History**
+- I had to understand how to store multiple calculations in a list.
+- I used `history.append()` to save each successful calculation.
+- I also used a `for` loop to display all saved calculations when the user selected option 7.
+
+**5. Menu-Based Program Using While Loop**
+- I initially needed to understand how to keep displaying the menu until the user chooses the exit option.
+- I used `while True` to repeat the menu.
+- I used `break` to stop the loop when the user selected option 8.
+
+**6. Unnecessary Print Statement**
+- I had an extra `print(history)` statement inside the power operation.
+- I understood that calculation history should be displayed through option 7 instead of printing it after every power calculation.
+- I removed the unnecessary statement.
+
+## 2. What I Learned
+
+- How to create and call functions.
+- How to use parameters and default arguments.
+- How to use `return` to send results back from functions.
+- How to handle invalid mathematical operations.
+- How to use lists to store calculation history.
+- How to use `if-elif-else` conditions.
+- How to create a menu-driven program using a `while` loop.
+- How to debug errors by checking variables and function results.
+
+## 3. Conclusion
+
+While creating this project,
+I faced challenges with functions, return values, error handling, and calculation history.
+By debugging my code and correcting my mistakes, I improved my understanding of Python functions, lists, loops, and conditional statements.
+This project also helped me improve my problem-solving and debugging skills.

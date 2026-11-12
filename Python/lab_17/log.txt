@@ -1,0 +1,100 @@
+STUDENT RECORDS MANAGEMENT SYSTEM
+CHALLENGE / LEARNING LOG
+
+Project: Student Records Management System
+Language: Python
+
+1. Working with Nested Dictionaries
+
+At first, I needed to understand how student records were stored.
+Each roll number was used as a key, and inside it, another dictionary contained the student's name and marks.
+
+I learned to access nested values using:
+- student[roll]["Name"]
+- student[roll]["Marks"]
+
+2. Calculating Total and Average
+
+I had to create a function to calculate the total and average marks.
+
+I used a for loop to add each mark to the total and then divided the total by the number of marks using len(marks).
+
+3. Returning Multiple Values from a Function
+
+The calculate_results() function needed to return both total and average.
+
+I learned that Python allows a function to return multiple values. I stored them using:
+
+total, average = calculate_results(marks)
+
+4. Displaying All Student Records
+
+I needed to loop through the student dictionary and display each student's roll number, name, marks, total, and average.
+
+I learned how to use dictionary keys to access each student's information.
+
+5. Adding a New Student
+
+I had to understand how to add a new record to the dictionary.
+
+I learned that dictionaries use a colon (:) between keys and values. 
+I created an add_student() function to insert a new student's name and marks using their roll number.
+
+6. Preventing Duplicate Roll Numbers
+
+Before adding a student, I needed to check whether the entered roll number already existed.
+
+I used the 'in' operator:
+
+if roll_no in student:
+
+This prevents an existing student record from being overwritten accidentally.
+
+7. Validating Student Marks
+
+One important mistake I made was in the marks validation condition.
+
+Initially, I used 'and' between the checks for marks below 0 and above 100. 
+This condition was incorrect because one mark cannot be below 0 and above 100 at the same time.
+
+I corrected the condition by using 'or'.
+
+A mark is invalid if it is less than 0 OR greater than 100.
+
+This helped me understand the difference between 'and' and 'or' in conditional statements.
+
+8. Searching for a Student
+
+I used the entered roll number to search for a student in the dictionary.
+
+If the roll number exists, the program displays the student's details and calculates the total and average.
+
+Otherwise, it displays a record-not-found message.
+
+9. Creating a Menu-Driven Program
+
+I used a while loop to keep displaying the menu until the user chooses Exit.
+
+I used if, elif, and else statements to perform the selected operation.
+
+I also used break to stop the loop when the user selects option 4 and continue when a duplicate roll number is entered.
+
+WHAT I LEARNED
+
+- How to create and access nested dictionaries.
+- How to define and call functions.
+- How to use for loops and while loops.
+- How to calculate totals and averages.
+- How to add and search dictionary records.
+- How to check for duplicate keys.
+- How to validate marks using conditional statements.
+- How to use return, continue, and break.
+- How to combine different Python concepts in one project.
+
+FINAL REFLECTION
+
+While building this project, I faced challenges with dictionary access, function calls, loop logic, and validation conditions.
+
+Debugging the marks validation condition helped me understand why choosing the correct logical operator is important.
+
+By completing this project, I practised combining functions, dictionaries, loops, and conditional statements to create a menu-driven Student Records Management System.

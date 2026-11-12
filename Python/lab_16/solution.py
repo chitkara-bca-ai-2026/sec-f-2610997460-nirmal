@@ -18,6 +18,9 @@ def modulus(a,b):
         return None
     else:
         return a%b
+def power(a,b=2):
+    return a**b
+    
 while True:
     print("Select an operation:")
     print("1. Addition(+)")
@@ -32,35 +35,85 @@ while True:
 
 
     choice=int(input("Enter your choice:"))
-    a=int(input("Enter the value of a:"))
-    b=int(input("Enter the value of b:"))
     if choice==1:
         a=int(input("Enter the value of a:"))
         b=int(input("Enter the value of b:"))
-        def ask_input():
-            return (a,b)
-        a,b=ask_input()
-        print("a+b=",add(a,b))
+        #def ask_input():
+         #   return (a,b)
+        #a,b=ask_input()
+        res=add(a,b)
+        print("a+b=",res)
+        history.append(f"{a}+{b}={res}")
     elif choice==2:   
-        def ask_input():
-            return(a,b)
-        a,b=ask_input()
-        print("a-b=",subtract(a,b))
+        a=int(input("Enter the value of a:"))
+        b=int(input("Enter the value of b:"))
+        #def ask_input():
+         #   return(a,b)
+        #a,b=ask_input()
+        res=subtract(a,b)
+        print("a-b=",res)
+        history.append(f"{a}-{b}={res}")
     elif choice==3:
-        def ask_input():
-            return(a,b)
-        a,b=ask_input()
-        print("a*b=",multiply(a,b))
+        a=int(input("Enter the value of a:"))
+        b=int(input("Enter the value of b:"))
+        #def ask_input():
+        #    return(a,b)
+        #a,b=ask_input()
+        res=multiply(a,b)
+        print("a*b=",res)
+        history.append(f"{a}*{b}={res}")
     elif choice==4:
-        def ask_input():
-            return(a,b)
-        a,b=ask_input()
-        print("a/b=",divide(a,b))  
+        a=int(input("Enter the value of a:"))
+        b=int(input("Enter the value of b:"))
+        #def ask_input():
+        #    return(a,b)
+        #a,b=ask_input()
+        res=divide(a,b)
+        if res is None:
+            print("CANNOT BE DIVIDED BY ZERO")
+        else:    
+            print("a/b=",res)
+            history.append(f"{a}/{b}={res}")  
     elif choice==5:
-        def ask_input():
-            return(a,b)
-        a,b=ask_input()
-        print("a%b=",modulus(a,b))
+        a=int(input("Enter the value of a:"))
+        b=int(input("Enter the value of b:"))
+        #def ask_input():
+        #    return(a,b)
+        #a,b=ask_input()
+        res=modulus(a,b)
+        if res is None:
+            print("CANNOT PERFORM MODULUS BY ZERO.")
+        else:
+            print("a%b=",res)
+            history.append(f"{a}%{b}={res}")
+    elif choice==6:
+        a=int(input("Enter the value of a:"))
+        b=int(input("Enter the value of b:"))
+        #def ask_input():
+        #    return(a,b)
+        #a,b=ask_input()  
+        res=power(a,b)  
+        print("a**b=",res)
+        history.append(f"{a}**{b}={res}")
+        
+        print(history)
+
+    elif choice==7:
+        if len(history)==0:
+            print("NO CALCULATION HISTORY!")
+        else:
+            print("CALCULATION HISTORY DISPLAY!")
+            for items in history:
+                print(items)    
+    elif choice==8:
+        print("THANKS FOR USING THE CULCULATOR!!!<'_'>")
+        break            
+    else:
+        print("INVALID CHOICE")
+
+
+
+
 
 
            

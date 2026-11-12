@@ -1,0 +1,42 @@
+LAB 15 – STUDENT INFORMATION MANAGEMENT SYSTEM
+CHALLENGES FACED
+
+1. Understanding Nested Dictionaries:
+   I faced difficulty understanding how to store multiple student records inside a main dictionary and how to access individual student details using multiple keys.
+
+2. Accessing Dictionary Values:
+   I was confused about accessing student information using roll numbers and keys such as Name, Branch, Semester, and Marks.
+
+3. Updating Student Details:
+   I found it challenging to update existing dictionary values without accidentally creating new keys or changing the wrong information.
+
+4. Managing Functions:
+   I faced some difficulty dividing the program into separate functions and understanding how to call each function from the main menu.
+
+5. While Loop and Menu:
+   I found it challenging to manage the menu using a while loop and make sure the program continued running until the user selected the Exit option.
+
+6. Searching and Deleting Records:
+   I needed to understand how dictionary methods like get() and pop() work when searching for and deleting student records.
+
+7. Academic Performance Calculation:
+   I faced difficulty accessing marks from the nested dictionary and calculating the total and average marks correctly.
+
+8. User Input and Data Types:
+   I sometimes forgot to convert numerical inputs into integers, which could cause problems during comparisons and calculations.
+
+9. Indentation and Conditions:
+   I had to be careful with indentation while writing functions, loops, and if-elif-else conditions.
+
+WHAT I LEARNED:
+
+- How to create and use nested dictionaries.
+- How to access, update, and delete dictionary values.
+- How to use dictionary methods such as get(), items(), and pop().
+- How to organise a program using functions.
+- How to manage a menu-driven program using a while loop.
+- How to calculate total and average marks using dictionary data.
+
+CONCLUSION:
+
+This lab helped me understand nested dictionaries and how they can be used to manage structured information. I also improved my understanding of functions, loops, conditional statements, and dictionary methods in Python.
